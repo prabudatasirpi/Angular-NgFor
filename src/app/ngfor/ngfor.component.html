@@ -1,0 +1,172 @@
+
+<!-- list -->
+<!--<h1>{{ title }}</h1>
+<ul>
+  <li *ngFor="let movie of movies">
+    {{movie.title}} - {{movie.director}}
+  </li>
+</ul> --->
+
+<!-- NgFor using to generating table data-->
+<!-- <div class="panel panel-primary">
+  <div class="panel-heading">
+    {{title}}
+  </div>
+  <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Hero</th>
+            <th>Release Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let movie of movies;">
+            <td>{{movie.title}}</td>
+            <td>{{movie.director}}</td>
+            <td>{{movie.hero}}</td>
+            <td>{{movie.releaseDate}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> -->
+
+<!-- Index -->
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      {{title}}
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>S.no</th>
+              <th>Title</th>
+              <th>Director</th>
+              <th>Hero</th>
+              <th>Release Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let movie of movies; let index=index;">
+  
+              <td>{{index-6}}</td>
+              <td>{{movie.title}}</td>
+              <td>{{movie.director}}</td>
+              <td>{{movie.hero}}</td>
+              <td>{{movie.releaseDate}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <!-- Odd number eve number-->
+  <!-- <div class="panel panel-primary">
+    <div class="panel-heading">
+      {{title}}
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Director</th>
+              <th>Hero</th>
+              <th>Release Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let movie of movies; let i = index; let o=odd; let e=even; " [ngClass]="{'bg-danger':o, 'bg-success':e}">
+  
+              <td>{{i+1}}</td>
+              <td>{{movie.title}}</td>
+              <td>{{movie.director}}</td>
+              <td>{{movie.hero}}</td>
+              <td>{{movie.releaseDate}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
+  
+  
+  
+  <!---   First and last local variables -->
+  <!-- <div class="panel panel-primary">
+    <div class="panel-heading">
+      {{title}}
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>S.no</th>
+              <th>Title</th>
+              <th>Director</th>
+              <th>Hero</th>
+              <th>Release Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let movie of movies; let i = index;let first= first; let last=last; " [ngClass]="{'bg-danger':first, 'bg-success':last}">
+  
+              <td>{{i+1}}</td>
+              <td>{{movie.title}}</td>
+              <td>{{movie.director}}</td>
+              <td>{{movie.hero}}</td>
+              <td>{{movie.releaseDate}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
+  
+  
+  <!--- Trackby -->
+  <!-- <div class="panel panel-primary">
+    <div class="panel-heading">
+      {{title}}
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>S.no</th>
+              <th>Title</th>
+              <th>Director</th>
+              <th>Hero</th>
+              <th>Release Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let movie of movies; let i = index;let first= first; let last=last; let trackBy = trackByFn " [ngClass]="{'bg-danger':first, 'bg-success':last}">
+  
+              <td>{{i+1}}</td>
+              <td>{{movie.title}}</td>
+              <td>{{movie.director}}</td>
+              <td>{{movie.hero}}</td>
+              <td>{{movie.releaseDate}}</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
